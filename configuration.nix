@@ -18,6 +18,9 @@
   boot.loader.grub.efiSupport = true;
   boot.loader.grub.useOSProber = true;
 
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
+
   # networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -48,10 +51,16 @@
     wget
     vim
     firefox
+    chromium
     git
     docker
     silver-searcher
     fzf
+    thunderbird
+    guake
+    planner
+    okular
+    slack 
   ];
   
   # Some programs need SUID wrappers, can be configured further or are
